@@ -118,6 +118,13 @@ const FbBasicHeaderForm = () => {
                 <FormLabel>Kuota Akhwat</FormLabel>
                 <TextField value={form.female_quota} fullWidth size="small" type="number" onChange={e => dispatchForm({type: 'SET', payload: {female_quota: e.target.value}})}/>
               </Grid>
+              
+              <Grid item lg={6}>
+
+                <FormLabel>Bot Whatsapp</FormLabel>
+                <TextField value={form.whatsapp_bot} fullWidth size="small" type="number" onChange={e => dispatchForm({type: 'SET', payload: {whatsapp_bot: e.target.value}})}/>
+              </Grid>
+
             </Grid>
         </CardContent>
 
