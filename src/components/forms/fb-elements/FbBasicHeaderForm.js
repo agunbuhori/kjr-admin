@@ -12,8 +12,9 @@ import {
 import moment from 'moment';
 import { Navigate, useParams } from 'react-router';
 import { Link } from 'react-router-dom';
-
+import 'moment/locale/id'
 import http from '../../../lib/http'
+
 
 const formReducer = (state, action) => {
   switch (action.type) {
@@ -51,7 +52,7 @@ const FbBasicHeaderForm = () => {
   }, [params])
 
   function save() {
-    const slug = 'kajian-'.concat(moment(form.datetime).format('DD-MM-YYYY'))
+    const slug = 'kajian-'.concat(moment(form.datetime).locale('id').format('dddd-DD-MMMM-YYYY-HH-mm')).toLowerCase()
     setSaving(true)
     http.post('admin/schedule', {...form, slug}).then(() => {
       setSaved(true)

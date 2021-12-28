@@ -233,7 +233,10 @@ const Schedules = () => {
                     </TableCell>
 
                     <TableCell>
-                      <Typography variant="h6">Ikhwan : {row.male_quota}, Akhwat : {row.female_quota}</Typography>
+                      <Typography variant="h6">
+                        Ikhwan {row.male_taken}/{row.male_quota}<br/>
+                        Akhwat {row.female_taken}/{row.female_quota}
+                      </Typography>
                     </TableCell>
 
                     <TableCell>
