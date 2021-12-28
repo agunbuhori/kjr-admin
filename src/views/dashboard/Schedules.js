@@ -182,7 +182,7 @@ const Schedules = () => {
                     <Typography variant="h5">Nama</Typography>
                   </TableCell>
                   <TableCell>
-                    <Typography variant="h5">Ikhwan/Akhwat</Typography>
+                    <Typography variant="h5">Ustadz</Typography>
                   </TableCell>
                   <TableCell>
                     <Typography variant="h5">Waktu</Typography>
@@ -215,7 +215,7 @@ const Schedules = () => {
                     
                     <TableCell>
                       <Typography color="textSecondary" variant="h6" fontWeight="400">
-                        {row.gender}
+                        {row.facilitator}
                       </Typography>
                     </TableCell>
                     <TableCell>
