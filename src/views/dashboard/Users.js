@@ -203,7 +203,7 @@ const Users = () => {
                 {users.map((row, index) => (
                   <TableRow key={index.toString()}>
                     <TableCell>
-                      <a href={`/schedule/${row._id}`} target="_blank" rel="noreferrer">
+                      <a href={`https://kjr.kampustsl.id/detail/${row._id}`} target="_blank" rel="noreferrer">
                         <Typography color="textPrimary" variant="h5">{row.name}</Typography>
                       </a>
                     </TableCell>
