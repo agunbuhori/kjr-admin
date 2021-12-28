@@ -123,6 +123,8 @@ const Schedules = () => {
     }}).then((response) => {
         setSchedules(response.data.data)
         setTotal(response.data.meta.total)
+    }).catch(() => {
+      window.location.href = '/auth/login'
     })
   }
 
