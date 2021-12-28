@@ -18,15 +18,7 @@ import CustomTextField from '../../../components/forms/custom-elements/CustomTex
 import userimg from '../../../assets/images/users/5.jpg';
 
 const Header = ({ sx, customClass, toggleSidebar, toggleMobileSidebar }) => {
-  const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
 
   // 4
   const [anchorEl4, setAnchorEl4] = React.useState(null);
