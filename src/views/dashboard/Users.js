@@ -203,9 +203,9 @@ const Users = () => {
                 {users.map((row, index) => (
                   <TableRow key={index.toString()}>
                     <TableCell>
-                      <Link to={`/schedule/${row._id}`}>
+                      <a href={`/schedule/${row._id}`} target="_blank" rel="noreferrer">
                         <Typography color="textPrimary" variant="h5">{row.name}</Typography>
-                      </Link>
+                      </a>
                     </TableCell>
                     
                     <TableCell>
