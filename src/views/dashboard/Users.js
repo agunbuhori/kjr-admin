@@ -247,7 +247,7 @@ const Users = () => {
                           pr: '3px',
                         }}
                         size="small"
-                        label={row.present_at}
+                        label={row.present_at ? 'Hadir' : '-'}
                       />
                     </TableCell>
 
