@@ -279,9 +279,6 @@ const Schedules = () => {
                         <Button onClick={() => deleteRow(row._id)}>
                             <Typography variant="h6" color="error">Hapus</Typography>
                         </Button>
-
-
-
                     </TableCell>
                   </TableRow>
                 ))}

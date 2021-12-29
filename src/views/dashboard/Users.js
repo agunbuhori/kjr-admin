@@ -235,11 +235,11 @@ const Users = () => {
                       <Chip
                         sx={{
                           backgroundColor:
-                          row.present
+                          row.present_at
                               ? (theme) => theme.palette.success.light
                               : row.status === 'Pending',
                           color:
-                          row.present
+                          row.present_at
                               ? (theme) => theme.palette.success.main
                               : row.status === 'Pending',
                           borderRadius: '6px',
@@ -247,7 +247,7 @@ const Users = () => {
                           pr: '3px',
                         }}
                         size="small"
-                        label={row.present}
+                        label={row.present_at}
                       />
                     </TableCell>
 
