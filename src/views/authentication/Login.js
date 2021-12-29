@@ -5,7 +5,6 @@ import CustomTextField from '../../components/forms/custom-elements/CustomTextFi
 import CustomFormLabel from '../../components/forms/custom-elements/CustomFormLabel';
 import PageContainer from '../../components/container/PageContainer';
 
-import img1 from '../../assets/images/backgrounds/login-bg.svg'; 
 import LogoIcon from '../../layouts/full-layout/logo/LogoIcon';
 import http from '../../lib/http';
 
@@ -54,7 +53,7 @@ const Login = () => {
             }}
           >
             <img
-              src={img1}
+              src="/muslim.png"
               alt="bg"
               style={{
                 width: '100%',
@@ -83,7 +82,7 @@ const Login = () => {
               }}
             >
               <Typography fontWeight="700" variant="h2">
-                Welcome to Flexy
+                Panitia Kajian Rutin
               </Typography>
               <Box display="flex" alignItems="center">
                 <Typography
@@ -94,7 +93,7 @@ const Login = () => {
                     mr: 1,
                   }}
                 >
-                  New to Flexy?
+                  Yayasan Tarbiyah Sunnah
                 </Typography>
                 
               </Box>
