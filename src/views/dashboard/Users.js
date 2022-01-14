@@ -188,13 +188,17 @@ const Users = () => {
                     <Typography variant="h5">Whatsapp</Typography>
                   </TableCell>
 
-
                   <TableCell>
                     <Typography variant="h5">Domisili</Typography>
                   </TableCell>
                   <TableCell>
                     <Typography variant="h5">Hadir</Typography>
                   </TableCell>
+                  
+                  <TableCell>
+                    <Typography variant="h5">Kendaraan</Typography>
+                  </TableCell>
+
                   
                   <TableCell>
                     <Typography variant="h5">Opsi</Typography>
@@ -261,6 +265,12 @@ const Users = () => {
                         size="small"
                         label={row.present_at ? 'Hadir' : '-'}
                       />
+                    </TableCell>
+
+                    <TableCell>
+                      <Typography color="textSecondary" variant="h6" fontWeight="400">
+                        {row.transport}
+                      </Typography>
                     </TableCell>
 
                     <TableCell>
