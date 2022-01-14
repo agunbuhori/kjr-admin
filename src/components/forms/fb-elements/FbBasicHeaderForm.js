@@ -35,7 +35,8 @@ const FbBasicHeaderForm = () => {
     facilitator: "",
     datetime: "",
     male_quota: 0,
-    female_quota: 0
+    female_quota: 0,
+    car_quota: 0
   })
   const [saved, setSaved] = React.useState(false)
   const [saving, setSaving] = React.useState(false)
@@ -114,16 +115,20 @@ const FbBasicHeaderForm = () => {
               </Grid>
               
               <Grid item lg={6}>
-
                 <FormLabel>Kuota Akhwat</FormLabel>
                 <TextField value={form.female_quota} fullWidth size="small" type="number" onChange={e => dispatchForm({type: 'SET', payload: {female_quota: e.target.value}})}/>
               </Grid>
               
               <Grid item lg={6}>
-
                 <FormLabel>Bot Whatsapp</FormLabel>
                 <TextField value={form.whatsapp_bot} fullWidth size="small" type="number" onChange={e => dispatchForm({type: 'SET', payload: {whatsapp_bot: e.target.value}})}/>
               </Grid>
+              
+              <Grid item lg={6}>
+                <FormLabel>Kuota Mobil</FormLabel>
+                <TextField value={form.car_quota} fullWidth size="small" type="number" onChange={e => dispatchForm({type: 'SET', payload: {car_quota: e.target.value}})}/>
+              </Grid>
+
 
             </Grid>
         </CardContent>
