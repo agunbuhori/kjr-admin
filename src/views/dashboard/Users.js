@@ -183,6 +183,11 @@ const Users = () => {
                   <TableCell>
                     <Typography variant="h5">Email</Typography>
                   </TableCell>
+                  
+                  <TableCell>
+                    <Typography variant="h5">Whatsapp</Typography>
+                  </TableCell>
+
 
                   <TableCell>
                     <Typography variant="h5">Domisili</Typography>
@@ -224,6 +229,13 @@ const Users = () => {
                         {row.email}
                       </Typography>
                     </TableCell>
+                    
+                    <TableCell>
+                      <Typography color="textSecondary" variant="h6" fontWeight="400">
+                        {row.whatsapp}
+                      </Typography>
+                    </TableCell>
+
 
                     <TableCell>
                     <Typography color="textSecondary" variant="h6" fontWeight="400">
