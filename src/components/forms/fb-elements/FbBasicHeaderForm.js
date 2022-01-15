@@ -63,10 +63,10 @@ const FbBasicHeaderForm = () => {
   }, [params])
 
   function save() {
-    if (! form.id)
-    const slug = 'kajian-'.concat(moment(form.datetime).locale('id').format('dddd-DD-MMMM-YYYY-HH-mm')).toLowerCase().concat('-').concat(makeid(4))
-    else
-    const slug = form.slug
+    let slug = 'kajian-'.concat(moment(form.datetime).locale('id').format('dddd-DD-MMMM-YYYY-HH-mm')).toLowerCase().concat('-').concat(makeid(4))
+    if (form.id)
+      slug = form.slug
+      
     setSaving(true)
     http.post('admin/schedule', {...form, slug}).then(() => {
       setSaved(true)
