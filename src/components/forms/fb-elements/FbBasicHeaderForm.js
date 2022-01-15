@@ -27,6 +27,17 @@ const formReducer = (state, action) => {
   }
 }
 
+function makeid(length) {
+  var result           = '';
+  var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  var charactersLength = characters.length;
+  for ( var i = 0; i < length; i++ ) {
+    result += characters.charAt(Math.floor(Math.random() * 
+charactersLength));
+ }
+ return result;
+}
+
 
 const FbBasicHeaderForm = () => {
   const [form, dispatchForm] = React.useReducer(formReducer, {
@@ -42,7 +53,6 @@ const FbBasicHeaderForm = () => {
   const [saving, setSaving] = React.useState(false)
   const params = useParams()
 
-  console.log(form)
 
   useEffect(() => {
     if (params.slug) {
@@ -53,7 +63,7 @@ const FbBasicHeaderForm = () => {
   }, [params])
 
   function save() {
-    const slug = 'kajian-'.concat(moment(form.datetime).locale('id').format('dddd-DD-MMMM-YYYY-HH-mm')).toLowerCase()
+    const slug = 'kajian-'.concat(moment(form.datetime).locale('id').format('dddd-DD-MMMM-YYYY-HH-mm')).toLowerCase() + '-' + makeid(4)
     setSaving(true)
     http.post('admin/schedule', {...form, slug}).then(() => {
       setSaved(true)
