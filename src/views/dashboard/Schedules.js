@@ -134,6 +134,12 @@ const Schedules = () => {
     fetchSchedules()
   }, [page, rowsPerPage])
 
+  React.useEffect(() => {
+    setInterval(() => {
+      fetchSchedules()
+    }, 10000);
+  }, [])
+
   const deleteRow = (_id) => {
     if (window.confirm("Hapus?"))
     http.delete(`admin/schedule/${_id}`).then(() => {
