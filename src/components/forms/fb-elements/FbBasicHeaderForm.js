@@ -63,7 +63,7 @@ const FbBasicHeaderForm = () => {
   }, [params])
 
   function save() {
-    const slug = 'kajian-'.concat(moment(form.datetime).locale('id').format('dddd-DD-MMMM-YYYY-HH-mm')).toLowerCase() + '-' + makeid(4)
+    const slug = 'kajian-'.concat(moment(form.datetime).locale('id').format('dddd-DD-MMMM-YYYY-HH-mm')).toLowerCase().concat('-').concat(makeid(4))
     setSaving(true)
     http.post('admin/schedule', {...form, slug}).then(() => {
       setSaved(true)
