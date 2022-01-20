@@ -135,9 +135,11 @@ const Schedules = () => {
   }, [page, rowsPerPage])
 
   React.useEffect(() => {
-    setInterval(() => {
+    const interval = setInterval(() => {
       fetchSchedules()
     }, 10000);
+
+    return () => clearInterval(interval)
   }, [])
 
   const deleteRow = (_id) => {
